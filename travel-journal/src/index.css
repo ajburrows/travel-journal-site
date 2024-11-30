@@ -1,3 +1,22 @@
 html, body {
     margin: 0;
 }
+
+header{
+  display: flex;
+  align-items: center;
+  background-color: F55A5A;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+.globe-icon{
+  width: 40px;
+}
+
+.header-title{
+  padding-left: 10px;
+  color: white;
+  font-family: "Inter";
+}
