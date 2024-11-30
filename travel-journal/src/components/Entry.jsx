@@ -5,8 +5,8 @@ export default function Entry(prop){
             <div className="main-image-container">
                 <img 
                     className="main-image"
-                    src={prop.img.src}
-                    alt={prop.img.alt}
+                    src={prop.entry.img.src}
+                    alt={prop.entry.img.alt}
                 />
             </div>
             <div className="info-container">
@@ -16,12 +16,12 @@ export default function Entry(prop){
                         src="src/assets/map-marker.png" 
                         alt="map marker icon"
                     />
-                    <span className="country">{prop.country}</span>
-                    <a href={prop.mapLink}>View on Google Maps</a>
+                    <span className="country">{prop.entry.country}</span>
+                    <a href={prop.entry.googleMapsLink}>View on Google Maps</a>
                 </div>
-                <h2 className="entry-title">{prop.title}</h2>
-                <p className="trip-dates">{prop.date}</p>
-                <p className="entry-text">{prop.description}</p>
+                <h2 className="entry-title">{prop.entry.title}</h2>
+                <p className="trip-dates">{prop.entry.dates}</p>
+                <p className="entry-text">{prop.entry.text}</p>
             </div>
             
         </article>

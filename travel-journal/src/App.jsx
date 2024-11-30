@@ -5,12 +5,9 @@ import data from "./data"
 
 export default function App(){
     const travel_entries = data.map(entry_data => {
-        return <Entry img={entry_data.img}
-                country={entry_data.country} 
-                mapLink={entry_data.googleMapsLink}
-                title={entry_data.title}
-                date={entry_data.date}
-                description={entry_data.text}
+        return <Entry 
+                key={entry_data.id}
+                entry={entry_data}
                 />
     })
     return(
@@ -20,17 +17,3 @@ export default function App(){
         </>
     )
 }
-
-/*
-<Entry 
-    img={{
-        src: "https://scrimba.com/links/travel-journal-japan-image-url",
-        alt: "Mount Fuji"
-    }}
-    country="Japan"
-    mapLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
-    title="Mount Fuji"
-    date="12 Jan, 2021 - 24 Jan, 2021"
-    description="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
-/>
-*/
